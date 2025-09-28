@@ -1,0 +1,32 @@
+﻿<Window x:Class="kuvankasittely.CanvasSizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Canvas Size"
+        Height="172" Width="300"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Width:" Grid.Row="0"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <Slider x:Name="WidthSlider" Minimum="1" Maximum="5000" Width="180"
+                    ValueChanged="WidthSlider_ValueChanged"/>
+            <TextBox x:Name="WidthTextBox" Width="60" Margin="10,0,0,0"
+                     TextChanged="WidthTextBox_TextChanged"/>
+        </StackPanel>
+
+        <Label Content="Height:" Grid.Row="2"/>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Slider x:Name="HeightSlider" Minimum="1" Maximum="5000" Width="180"
+                    ValueChanged="HeightSlider_ValueChanged"/>
+            <TextBox x:Name="HeightTextBox" Width="60" Margin="10,0,0,0"
+                     TextChanged="HeightTextBox_TextChanged"/>
+        </StackPanel>
+    </Grid>
+</Window>
